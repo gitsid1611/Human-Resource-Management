@@ -1,0 +1,29 @@
+create table employee
+(
+empId int primary key auto_increment,
+username varchar(20),
+password varchar(12),
+name varchar(20),
+deptId int,
+Salary int,
+joinDate varchar(30),
+leaveAvi int,
+manageID int
+);
+
+create table department
+(
+deptId int primary key,
+deptName varchar(20),
+deptLoc varchar(20)
+);
+
+create table leaves
+(
+empId int ,
+leaveNo int primary key auto_increment,
+leaveDay int,
+reason varchar(30)
+);
+
+
