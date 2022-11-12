@@ -6,6 +6,7 @@ public class EmployeeDto {
 
 	private int empId ;
 	private String username ;
+	private String password;
 	private String name ;
 	private int salary ;
 	private Date joinDate ;
