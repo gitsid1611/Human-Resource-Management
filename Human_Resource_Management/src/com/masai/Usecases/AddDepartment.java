@@ -19,7 +19,7 @@ public class AddDepartment {
 
 		System.out.println("Enter Department Location");
 		String location = sc.nextLine();
-		sc.close();
+//		sc.close();
 		
 		
 		Department d1 = new Department();
@@ -32,7 +32,7 @@ public class AddDepartment {
 		
 			String result =dao.addDepartment(d1);
 //			System.out.println(result);
-			if (result.equals("Bus added Successfully")) {
+			if (result.equals("Department Added successfully")) {
 				System.out.println(result);
 			}
 			else {

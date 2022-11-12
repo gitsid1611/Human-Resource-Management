@@ -16,10 +16,15 @@ public class UpdateDepartment {
 		
 		System.out.println("Enter the Department Name whose Location is to be change");
 		String name = sc.nextLine();
-		sc.close();
+//		sc.close();
 		
 		AdminDao dao = new AdminDaoImpl();
 		String result=dao.updateDepartmentLocation(name, Location);
-		System.out.println(result);
+		if (result.equals("Department Updated Successfully")) {
+			System.out.println(result);
+		}
+		else {
+			System.out.println(result);
+		}
 	}
 }
