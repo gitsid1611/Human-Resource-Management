@@ -1,9 +1,14 @@
 package com.masai.Usecases;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.masai.Bean.Department;
+import com.masai.Bean.Leaves;
 import com.masai.Dao.AdminDao;
 import com.masai.Dao.AdminDaoImpl;
+import com.masai.Exceptions.DepartmentException;
+import com.masai.Exceptions.EmployeeException;
 
 public class Accept_Leave {
 
@@ -14,10 +19,22 @@ public class Accept_Leave {
 		System.out.println("Enter the Employee -ID");
 		int empID =  sc.nextInt();
 		
-       AdminDao edao = new AdminDaoImpl() ;
+       AdminDao dao = new AdminDaoImpl() ;
 		
-		String result = edao.acceptLeave(empID) ;
-		System.out.println(result);
+//		String result = edao.acceptLeave(empID) ;
+//		System.out.println(result);
+		
+//		//////////////////////////////////////////////////////////
+		
+		try {
+			List<Leaves> dep = dao.getLeavesList();
+			dep.forEach(res -> System.out.println(res));
+		} catch (EmployeeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 	}
 

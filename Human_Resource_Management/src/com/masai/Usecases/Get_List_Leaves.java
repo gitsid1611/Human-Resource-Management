@@ -15,7 +15,7 @@ public class Get_List_Leaves {
 		
 		try {
 			List<Leaves> list = dao.getLeavesList() ;
-			System.out.println(list);
+			list.forEach(res->System.out.println(res));
 		} catch (EmployeeException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

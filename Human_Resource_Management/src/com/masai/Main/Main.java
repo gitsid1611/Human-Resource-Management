@@ -34,6 +34,8 @@ public class Main {
 	//////////////////////////Welcome ///////////////////////
 	
 	static void AdminOrEmployee() {
+		System.out.println("Welcome to Human Resource Management" +"\n"
+	                        +"Choose the following option to Login!..."+"\n");
 		System.out.println("+---------------------------+" + "\n"
 						    + "| 1. Login As Administrator |" + "\n"
 						 	+ "| 2. Login As Employee      |" + "\n"
@@ -55,13 +57,14 @@ public class Main {
 		
 		if(choice ==1)
 		{
+			System.out.println("Choose the following option"+"\n");
 			AdminLogin();
 		}
 		else if(choice==2)
 		{
 			if(EmployeeLoginUseCase.login()==true)
 			{
-				System.out.println("Login Successful .. Please choose following operation .");
+				System.out.println("\n"+"Login Successful .. Please choose following operation ."+"\n");
 				employeeMethods();
 			}
 			else {
@@ -74,7 +77,7 @@ public class Main {
 			AdminOrEmployee();
 		}
 		else {
-			System.out.println("Choose Correct Option.");
+			System.out.println("Please Select Correct Option.");
 			AdminOrEmployee();
 		}
 	}
@@ -123,6 +126,7 @@ public class Main {
 			choice = sc.nextInt();
 		
 			if (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice!=6 && choice!=7 && choice !=8) {
+				System.out.println("Please Select Correct Option.");
 				adminMethods();
 			}
 			else adminChoice(choice);
@@ -145,40 +149,55 @@ public class Main {
 		
 		switch(choice) {
 			case 1 : {
+				System.out.println("\n");
 				AddDepartment.addDepartment();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;
 			case 2 : {
+				System.out.println("\n");
 				UpdateDepartment.updateDept();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;
 			case 3 : {
-				EmployeeRegister.employeeRegister();;
+				System.out.println("\n");
+				EmployeeRegister.employeeRegister();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;
 			case 4 : {
+				System.out.println("\n");
 				TransferEmployee.transfe();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;	
 			case 5 : {
+				System.out.println("\n");
 				ViewDepartment.viewDept();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;	
 			case 6 : {
+				System.out.println("\n");
 				Get_List_Leaves.leav();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				Accept_Leave.leav();
+				System.out.println("\n"+"Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;	
 			case 7 : {
+				System.out.println("\n");
 				Get_List_Leaves.leav();
+				System.out.println("Please Select Following Option"+"\n");
 				Reject_Leave.leav();
-				
+				System.out.println("Please Select Following Option"+"\n");
 				adminMethods();
 			}
 			break;
@@ -198,7 +217,7 @@ public class Main {
 	
 	static void employeeMethods() {
 		
-		System.out.println("+--------------------------------+" + "\n"
+		System.out.println("\n"+"+--------------------------------+" + "\n"
 				 		 + "| 1. View Profile                |" + "\n"
 				         + "| 2. Update Profile Password     |" + "\n"
 				         + "| 3. Request for Leave           |" + "\n"
@@ -212,15 +231,21 @@ public class Main {
 			int choice = sc.nextInt();
 			
 			if (choice == 1) {
+				System.out.println("\n");
 				ViewPersonal_Profile.vieprofil();
+				System.out.println("Please Select Following Option"+"\n");
 				employeeMethods();
 			}
 			else if (choice == 2) {
+				System.out.println("\n");
 				Update_Password.pass();
+				System.out.println("Please Select Following Option"+"\n");
 				employeeMethods();
 			}
 			else if (choice == 3) {
+				System.out.println("\n");
 				Apply_Leave.appl();
+				System.out.println("Please Select Following Option"+"\n");
 				employeeMethods();
 			}
 			else if (choice == 4) {
